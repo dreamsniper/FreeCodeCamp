@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Tangerine:700');
+
+// Default styles for smaller than 720px screen. customizd to a screen width starting at 320px
+body{
+  background-image: url("http://www.publicdomainpictures.net/pictures/60000/velka/quatrefoil-pattern-background-green.jpg");
+  font-family: merriweather, "Times New Roman", serif;
+  font-size: 1.5em;
+  font-weight: 2em;
+}
+.container-fluid {
+  background-color: white;
+}
+ h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+  h2 {
+    font-family: 'Tangerine', cursive;
+  }
+  h4{
+    line-height: 1.5em;
+  }
+
+button{
+  padding: .5em;
+  margin: 1em;
+  float: right;
+}
+img {
+    box-sizing: border-box;
+    margin: .5em;
+  }
+#main_nav {
+    clear: both;
+    display: none;
+    /*hidden to start */
+      ul {
+      list-style: none;
+      line-height: 1em;
+      margin: .5em;
+      padding: 0;
+        li a {
+          display: block;
+          padding: .5em;
+          /* 10px in ems is 10/16 */
+          text-decoration: none;
+          text-align: right;
+        }
+        a:hover {
+          color: red;
+        }
+        a:active {
+          color: #555;
+        }
+      }
+  .main-image{
+    width: 40%;
+  }
+}
+.timeline, {
+  ul{
+    list-style-type: circle;
+    li {
+      margin: 1.5em;
+    }
+  }
+   h2 {
+      font-family: 'Roboto Condensed', sans-serif;
+    }
+}
+.publications{
+  background-color: #f9f9f9;
+}
+// to style the quote code taken from https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+//---------------------------------------------
+//default styles for medium screens btwn 720px and 1150px
+@media only screen and (min-width: 720px) {
+    /* hide the menu button */
+    .menu {
+      display: none;
+    }
+    #main_nav {
+        /* move main_nav to top of the screen */
+        width: 100%;
+        display: inline;
+        overflow: hidden;
+        li {
+            display: inline;
+            padding: 0;
+        }
+        a {
+            float: right;
+            padding: 0;
+            /* 10/16  and  15/16 */
+            border-bottom: none;
+            margin: 0;
+        }
+    }
+    #main_nav li a.top {
+      //removes button when larger screen size
+        display: none;
+    }
+
+  .main-image{
+    width: 60%;
+  }
+  blockquote{
+    width: 70%;
+  }
+}
+
+//---------------------------------------------
+//default style for screens larger than 1200px
+@media only screen and (min-width: 1150px) {
+  .container-fluid{
+    max-width: 1200px;
+  }
+  .main-image{
+    width: 75%;
+  }
+}
